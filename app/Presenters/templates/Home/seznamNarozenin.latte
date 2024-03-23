@@ -1,0 +1,25 @@
+{layout '../../@layout.latte'}
+
+{block title}Seznam narozenin{/block}
+
+
+{block content}
+    <section class="main-form-section">
+        <h1>Seznam narozenin</h1>
+        <form action="" method="" id="vyhledejOsobuForm" class="form">
+                <input type="text" name="VyhledejJmeno" id="vyhledejJmeno" placeholder="Jméno" required>
+                <input type="text" name="VyhledejPrijmeni" id="vyhledejPrijmeni" placeholder="Přijmení" required>
+                <input type="submit" value="&#128269; Vyhledat osobu" id="vyhledejOsobuSubmit">
+        </form>
+    </section>
+        <div id="seznam-narozenin">
+            <p id="hledanaOsobaInfo"><p>
+        </div>
+
+
+{/block}
+
+{block scripts}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="{$basePath}/js/seznam-narozenin.js"></script>
+{/block}

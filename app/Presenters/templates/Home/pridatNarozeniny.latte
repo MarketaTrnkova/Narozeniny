@@ -1,0 +1,26 @@
+{layout '../../@layout.latte'}
+
+{block title}Přidat narozeniny{/block}
+
+
+{block content}
+<section class="main-form-section">
+    <h1>Přidat narozeniny</h1>
+    <form action="" method="" id="pridejOsobuForm" class="form">
+        <input type="text" name="Jmeno" id="jmeno" placeholder="Jméno" required>
+        <input type="text" name="Prijmeni" id="prijmeni" placeholder="Přijmení" required>
+        <input type="date" name="DatumNarozeni" id="datum-narozeni" placeholder="Datum narození" required>
+        <input type="submit" value="Přidat osobu" id="pridejOsobuSubmit">
+    </form>
+</section>
+
+<div class="vysledkyHledani" id="vysledkyHledani">
+        <p id="hledanaOsobaInfo"><p>
+</div>
+
+{/block}
+
+{block scripts}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="{$basePath}/js/pridej-narozeniny.js"></script>
+{/block}

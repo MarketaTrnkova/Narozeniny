@@ -1,0 +1,36 @@
+{layout '../../@layout.latte'}
+
+{block title}Chat{/block}
+
+
+
+{block content}
+
+    <h2 class="title_vsechny_zpravy">Všechny zprávy</h2>
+    <div class="vsechny-zpravy-z-chatu">
+        <p n:foreach="$vsechnyZpravy as $zprava" class="zprava {if isset($aktivniZprava) && $aktivniZprava == $zprava->messageId}zprava-active{/if}" messageId={$zprava->messageId}><span class="autor-zpravy">{$zprava->name}:</span> {$zprava->message}</p>
+    </div>
+    <button class="modalBtnZprava">Napsat zprávu</button>
+    
+    <dialog class="odeslatZpravuDialog">
+            {control odeslatZpravu}
+    </dialog>
+    
+    <h2 class="nadpis_odpovedi" title="Označ zprávu pro zobrazení odpovědí">Odpovedi k vybrané zprávě</h2>
+
+    <div class="vsechny-odpovedi">
+
+    </div>
+    <div class="modalBtnWrapper hidden">
+        <button class="modalBtnOdpoved">Napsat odpověď</button>
+    </div>
+
+    <dialog class="odeslatOdpovedDialog">
+            {control odeslatOdpoved}
+    </dialog>
+{/block}
+
+{block scripts}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="{$basePath}/js/chat.js"></script>
+{/block}

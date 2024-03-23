@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="{$basePath}/css/style.css">
+	<title>{ifset title}{include title|stripHtml} | {/ifset}Narozeniny</title>
+</head>
+
+<body>
+	<header>
+	<div class="picture-wrapper">
+		<a href="{link Home:seznamNarozenin}">
+			<picture>
+				<source srcset="{$basePath}/img/logo.avif" type="image/avif" alt="narozeniny logo">
+				<img src="{$basePath}/img/logo.jpg" alt="narozeniny logo" {}>
+			</picture>
+		</a>
+	</div>
+		<nav class="nav">
+			<ul class="nav_ul">
+				<li><a href="{link Home:seznamNarozenin}" n:class="$aktualniStranka == 'seznam-narozenin' ? active_page " >Seznam narozenin</a></li> 
+				<li><a href="{link Home:pridatNarozeniny}" n:class="$aktualniStranka == 'pridat-narozeniny' ? active_page " >Přidat narozeniny</a></li> 
+				<li><a href="{link Home:upravitNarozeniny}"  n:class="$aktualniStranka == 'upravit-narozeniny' ? active_page">Upravit narozeniny</a></li> 
+				<li><a href="{link Home:smazatNarozeniny}"  n:class="$aktualniStranka == 'smazat-narozeniny' ? active_page" >Smazat narozeniny</a></li> 
+				<li><a href="{link Home:chat}"  n:class="$aktualniStranka == 'chat' ? active_page" >Chat</a></li> 
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="main-container">
+
+				
+			{block content} <p>block content rodicovske sablony</p>{/block}
+		</div>
+	</main>
+
+	<footer>
+	</footer>
+	{block scripts}
+	<script src="https://unpkg.com/nette-forms@3/src/assets/netteForms.js"></script>
+
+	{/block}
+</body>
+</html>

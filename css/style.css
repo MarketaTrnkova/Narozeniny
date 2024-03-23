@@ -1,0 +1,387 @@
+:root{
+    --lightPrimary: #f8f8eb;;
+    --darkPrimary: #152f3a;
+    --lightPink: #fef0ef;
+
+    --borderRadiusBtn: 15px;
+    --padingBtn: 0.8em;
+
+    --flashMessageFontSize: 1.2rem;
+    
+}
+
+*{
+    color: var(--darkPrimary);
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.picture-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+header picture,img{
+    width: 200px;
+}
+
+
+.nav_ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+}
+.nav_ul li{
+    padding: 15px;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 15px;
+    transition: ease-in 0.4s;
+}
+
+.nav_ul li a:hover{
+    text-shadow:0.1px 0.1px 0.2px; 
+    border-bottom: 2px solid var(--darkPrimary);
+
+}
+
+
+.active_page{
+    background-image: url("../img/MenuHoverPozadi.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    color: var(--lightPrimary);
+}
+
+.main-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 1.5em auto;
+max-width: 1700px;
+}
+
+.main-form-section{
+    background-color: var(--lightPink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 1em 2em 1em;
+    margin-bottom: 1.5em;
+    width: 100%;
+
+}
+
+.main-form-section p{
+   text-align: center;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 80%;
+}
+
+input{
+    border-radius: 10px;
+    border: 1px solid #e2d6d763;
+    box-shadow: var(--hoverBtnBoxShadow);
+}
+input:active, input:focus{
+    border: 1px solid #e2d6d763;
+}
+
+.form > *{
+    width: 100%;
+    padding: 0.5em;
+}
+
+.main-form-section > *{
+    max-width: 900px;
+}
+
+#seznam-narozenin{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 0.5em;
+    align-items: center;
+    width: 100%;
+}
+
+
+.osoba-info-seznam{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.183);;
+    padding: 1em;
+    width: 100%;
+} 
+.hledanaOsobaWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.hledanaOsobaWrapper p{
+    font-size: 1.2rem;
+}
+
+.osoba-info-seznam > p{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.uprav-osobu-btn, .smazat-osobu-btn, .modalBtnOdpoved, .modalBtnZprava, .hledanaOsobaWrapper button{
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: var(--borderRadiusBtn);
+    padding: var(--padingBtn);
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.183);
+}
+.uprav-osobu-btn{
+    background-color: white;
+}
+.smazat-osobu-btn, .modalBtnOdpoved, .modalBtnZprava, .hledanaOsobaWrapper button{
+    border: none;
+    background-image: linear-gradient(to right,#f06849c0,#f9a867 10%, #f9a867 25%, #fc8e34, #f06949 60%, #f06949 85%, #f37164);
+}
+
+.uprav-osobu-btn:hover, .smazat-osobu-btn:hover, .modalBtnOdpoved:hover, .modalBtnZprava:hover, .hledanaOsobaWrapper button:hover, .button:hover, #pridejOsobuSubmit:hover, #upravitOsobuSubmit:hover{
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.183);
+    cursor: pointer;
+}
+
+.info-hlaska{
+    text-align: center;
+    font-size: var(--flashMessageFontSize);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.osoba-info-seznam:nth-of-type(even){
+    background-color: var(--ligtPink);
+}
+
+.form input[type="submit"], input[type='submit']{
+    background-image: url(../img/MenuHoverPozadi.png);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--lightPink);
+    border: none;
+    border-radius: var(--borderRadiusBtn);
+    padding: var(--padingBtn);
+}
+
+#vyhledejOsobuSubmit:hover{
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.183);;
+}
+
+#seznam-narozenin{
+    margin: 0.8em;
+}
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+}
+
+.vysledkyHledani p{
+text-align: center;
+font-size: var(--flashMessageFontSize);
+}
+
+
+.title_vsechny_zpravy, .nadpis_odpovedi{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 15px;
+    background-color: var(--lightPink);
+    border-radius: var(--borderRadiusBtn);
+}
+
+.vsechny-zpravy-z-chatu{
+    width: 90%;
+    margin: 0 auto;
+    max-height: 50vh;
+    overflow-y: scroll;
+    padding: 0 15px;
+}
+
+.vsechny-zpravy-z-chatu .zprava:hover {
+    cursor: pointer;
+}
+.autor-zpravy{
+    font-weight: 900;
+}
+
+.zprava{
+    padding: 0.7em;
+    border-radius: var(--borderRadiusBtn);
+}
+.zprava-active{
+    background-color: var(--lightPink);
+}
+
+.modalBtnWrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.modalBtnWrapper button, .modalBtnZprava{
+    width: 100%;
+}
+
+.vsechny-odpovedi{
+    width: 90%;
+    margin: 0 auto;
+    max-height: 30vh;
+    overflow-y: scroll;
+    padding: 0 15px;
+}
+
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.osoba-info-seznam{
+    display: flex;
+    align-items: center;
+}
+
+.smazat-osobu-btn, .uprav-osobu-btn{
+    height: 30%;
+    margin: 0 10px;
+    text-align: center;
+}
+dialog{
+    padding: 2em;
+    border-radius: 20px;
+    width: 80%;
+}
+
+dialog input[type='text'], textarea{
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+dialog::backdrop {
+    background-color: #ffcecb9c;
+    border: none;
+  }
+
+
+form table{
+    width: 100%;
+}
+
+form table tr{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+ }
+ form table tr > *{
+    width: 100%;
+    text-align: left;
+ }
+ /* Button ve formularich v Nette tride Form*/
+.button{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    height: 8em;
+}
+
+/****************** Media queries ******************/
+@media screen and (min-width: 800px) {
+    #seznam-narozenin{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+    
+    .osoba-info-seznam {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+    } 
+ 
+    .hledanaOsobaWrapper{
+        grid-column: 1/ span 2;
+    }
+
+    .smazat-osobu-btn, .uprav-osobu-btn{
+        height: 90%;
+        width: 45%;
+    }
+    
+}
+
+@media screen and (min-width: 1100px) {
+    .nav_ul{
+        flex-direction: row;
+    }
+    .vsechny-zpravy-z-chatu{
+        max-height: 30vh;
+    }
+
+    #seznam-narozenin{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+    
+    .hledanaOsobaWrapper{
+        grid-column: 1/ span 3;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+    #seznam-narozenin{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .hledanaOsobaWrapper{
+        grid-column: 1/ span 4;
+    }
+
+}
+
+@media screen and (min-width: 1500px) {
+
+    #seznam-narozenin{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .hledanaOsobaWrapper{
+        grid-column: 1/ span 5;
+    }
+
+
+}
